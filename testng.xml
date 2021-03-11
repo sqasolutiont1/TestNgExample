@@ -2,8 +2,14 @@
 
 <suite name="Suite1" verbose="1" >
     <test name="TestAlerts" >
-        <packages>
-            <package name="tests.alerts" />
-        </packages>
+        <groups>
+           <run>
+               <include name="wzrd" />
+           </run>
+        </groups>
+        <classes>
+            <class name = "tests.alerts.Test_Suite" />
+            <class name = "tests.alerts.Test_Wizard" />
+        </classes>
     </test>
 </suite>

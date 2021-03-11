@@ -2,6 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.log4testng.Logger;
 
 public class Wizard extends CommonPage {
@@ -13,7 +14,7 @@ public class Wizard extends CommonPage {
     public void setFirstName(String value) {
         saveToLogFile("Setting first name as: " + value);
 
-        Logger.getLogger(CommonPage.class).info("Setting first name as: " + value);
+        Reporter.log("Setting first name as: " + value);
         By locator = By.name("firstName");
         saveToLogFile("Clearing the text field" + locator.toString());
 
